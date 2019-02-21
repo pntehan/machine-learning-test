@@ -38,15 +38,15 @@ def chooseBestFeatureToSplit(dataSet):
 	# 选择最好的数据划分方式
 	numFeatures = len(dataSet[0]) - 1
 	baseEntropy = calcShannonEnt(dataSet)
-	bestInfoGain, bestFeature = 0.0, 0
+	bestInfoGain, bestFeature = 0.0, -1
 	for i in range(numFeatures):
 		featList = [example[i] for example in dataSet]
 		uniqueVals = set(featList)
 		newEntroy = 0.0
 		for value in uniqueVals:
 			subDataSet = splitDataSet(dataSet, i, value)
-			prob = len(subDataSet)
-			newEntroy += prob*calcShannonEnt(subDataSet)
+			# prob = len(subDataSet)
+			newEntroy += calcShannonEnt(subDataSet)
 			infoGain = baseEntropy - newEntroy
 			if infoGain > bestInfoGain:
 				bestInfoGain = infoGain
