@@ -47,7 +47,7 @@ with open('lenses.txt') as fp:
 	lenses = [inst.strip('\n').split('\t') for inst in fp.readlines()]
 	lensesTree = tree.createTree(lenses, lensesLabels)
 	print(lensesTree)
-treePlot.createPlot(lensesTree)
+# treePlot.createPlot(lensesTree)
 
 
 
