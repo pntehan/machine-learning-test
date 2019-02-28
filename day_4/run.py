@@ -14,8 +14,8 @@ from numpy import *
 # print(weights)
 # logRegres.plotBestFit(weights)
 
-# 随机梯度上升算法最优logistic回归函数实战
-logRegres.multiTest()
+# # 随机梯度上升算法最优logistic回归函数实战
+# logRegres.multiTest()
 
 
 
